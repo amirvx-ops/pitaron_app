@@ -1,0 +1,1 @@
+SELECT חודש, SUM(מינוי_סוכן) AS סה_כ_מינוי_סוכן FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') GROUP BY חודש ORDER BY חודש
