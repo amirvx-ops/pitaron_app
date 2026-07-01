@@ -1,0 +1,1 @@
+SELECT SUM(מינוי_סוכן) AS סה_כ_מינוי_סוכן, SUM(סגירות) AS סה_כ_סגירות, COUNT(*) AS סה_כ_לידים FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') AND ('{{Select_Month.selectedOptionValue}}' = '' OR חודש = '{{Select_Month.selectedOptionValue}}')

@@ -1,0 +1,1 @@
+SELECT חברת_ביטוח AS insurance_company, COUNT(*) AS leads_count FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') AND ('{{Select_Month.selectedOptionValue}}' = '' OR חודש = '{{Select_Month.selectedOptionValue}}') GROUP BY חברת_ביטוח ORDER BY leads_count DESC

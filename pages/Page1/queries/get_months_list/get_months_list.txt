@@ -1,0 +1,1 @@
+SELECT DISTINCT חודש AS label, חודש AS value FROM partner_commissions_view ORDER BY חודש DESC

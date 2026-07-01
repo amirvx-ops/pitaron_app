@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a436ec99d8beed5d4bca685_1baef25f-8670-4807-861a-154774dc92ea",
-  "id": "Page1_get_trend_by_month",
+  "gitSyncId": "6a436ec99d8beed5d4bca685_677afe7b-bc8d-4142-9513-148f011115de",
+  "id": "Page1_get_partners_list",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT חודש, SUM(מינוי_סוכן) AS סה_כ_מינוי_סוכן FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') GROUP BY חודש ORDER BY חודש\n",
+      "body": "SELECT DISTINCT שם_שותף AS label, שם_שותף AS value FROM partner_commissions_view ORDER BY שם_שותף\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,12 +22,8 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "get_trend_by_month",
+    "dynamicBindingPathList": [],
+    "name": "get_partners_list",
     "pageId": "Page1",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

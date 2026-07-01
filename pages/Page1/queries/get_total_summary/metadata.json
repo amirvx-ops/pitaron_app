@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a436ec99d8beed5d4bca685_1baef25f-8670-4807-861a-154774dc92ea",
-  "id": "Page1_get_trend_by_month",
+  "gitSyncId": "6a436ec99d8beed5d4bca685_dd431252-94dc-4f8e-b07d-f16a8500d1e3",
+  "id": "Page1_get_total_summary",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT חודש, SUM(מינוי_סוכן) AS סה_כ_מינוי_סוכן FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') GROUP BY חודש ORDER BY חודש\n",
+      "body": "SELECT SUM(מינוי_סוכן) AS סה_כ_מינוי_סוכן, SUM(סגירות) AS סה_כ_סגירות, COUNT(*) AS סה_כ_לידים FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') AND ('{{Select_Month.selectedOptionValue}}' = '' OR חודש = '{{Select_Month.selectedOptionValue}}')\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "get_trend_by_month",
+    "name": "get_total_summary",
     "pageId": "Page1",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

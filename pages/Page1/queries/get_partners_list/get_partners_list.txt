@@ -1,0 +1,1 @@
+SELECT DISTINCT שם_שותף AS label, שם_שותף AS value FROM partner_commissions_view ORDER BY שם_שותף

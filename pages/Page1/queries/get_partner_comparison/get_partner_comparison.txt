@@ -1,0 +1,1 @@
+SELECT שם_שותף AS partner_name, COUNT(*) AS leads_count, SUM(מינוי_סוכן) AS total_agent_appointment FROM partner_commissions_view WHERE ('{{Select_Month.selectedOptionValue}}' = '' OR חודש = '{{Select_Month.selectedOptionValue}}') GROUP BY שם_שותף ORDER BY total_agent_appointment DESC

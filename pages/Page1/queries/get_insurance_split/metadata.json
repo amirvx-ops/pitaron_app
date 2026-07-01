@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a436ec99d8beed5d4bca685_1baef25f-8670-4807-861a-154774dc92ea",
-  "id": "Page1_get_trend_by_month",
+  "gitSyncId": "6a436ec99d8beed5d4bca685_586e2123-8964-4e6c-8df0-c5b031543cd0",
+  "id": "Page1_get_insurance_split",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT חודש, SUM(מינוי_סוכן) AS סה_כ_מינוי_סוכן FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') GROUP BY חודש ORDER BY חודש\n",
+      "body": "SELECT חברת_ביטוח AS insurance_company, COUNT(*) AS leads_count FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') AND ('{{Select_Month.selectedOptionValue}}' = '' OR חודש = '{{Select_Month.selectedOptionValue}}') GROUP BY חברת_ביטוח ORDER BY leads_count DESC\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "get_trend_by_month",
+    "name": "get_insurance_split",
     "pageId": "Page1",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

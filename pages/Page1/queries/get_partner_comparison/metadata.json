@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a436ec99d8beed5d4bca685_1baef25f-8670-4807-861a-154774dc92ea",
-  "id": "Page1_get_trend_by_month",
+  "gitSyncId": "6a436ec99d8beed5d4bca685_0de0ec1f-b07b-4640-8409-1029c07b90f8",
+  "id": "Page1_get_partner_comparison",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT חודש, SUM(מינוי_סוכן) AS סה_כ_מינוי_סוכן FROM partner_commissions_view WHERE ('{{Select_Partner.selectedOptionValue}}' = '' OR שם_שותף = '{{Select_Partner.selectedOptionValue}}') GROUP BY חודש ORDER BY חודש\n",
+      "body": "SELECT שם_שותף AS partner_name, COUNT(*) AS leads_count, SUM(מינוי_סוכן) AS total_agent_appointment FROM partner_commissions_view WHERE ('{{Select_Month.selectedOptionValue}}' = '' OR חודש = '{{Select_Month.selectedOptionValue}}') GROUP BY שם_שותף ORDER BY total_agent_appointment DESC\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "get_trend_by_month",
+    "name": "get_partner_comparison",
     "pageId": "Page1",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
