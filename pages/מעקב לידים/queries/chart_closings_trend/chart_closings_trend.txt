@@ -1,0 +1,2 @@
+SELECT TO_CHAR(DATE_TRUNC('month', "תאריך_עדכון"), 'MM/YYYY') AS x, COUNT(CASE WHEN "סגירות" > 0 THEN 1 END)::int AS y FROM partner_commissions_view WHERE "תאריך_עדכון" >= CURRENT_DATE - INTERVAL '12 months' AND ('{{Select_Partner.selectedOptionValue}}' = '' OR "שם_שותף" = '{{Select_Partner.selectedOptionValue}}') GROUP BY DATE_TRUNC('month', "תאריך_עדכון") ORDER BY DATE_TRUNC('month', "תאריך_עדכון")
+

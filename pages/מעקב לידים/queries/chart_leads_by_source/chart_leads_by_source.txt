@@ -1,0 +1,1 @@
+SELECT COALESCE("שם_שותף", 'לא ידוע') AS x, COUNT(*)::int AS y FROM partner_commissions_view GROUP BY "שם_שותף" ORDER BY y DESC

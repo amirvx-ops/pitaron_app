@@ -1,0 +1,1 @@
+SELECT DISTINCT TO_CHAR("תאריך_עדכון", 'MM/YYYY') AS month_label FROM partner_commissions_view WHERE "תאריך_עדכון" IS NOT NULL ORDER BY month_label DESC

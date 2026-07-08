@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4cb135fad1adb7bca06abf_6ad86103-e860-4aac-81ae-03809010aa0c",
+  "id": "דשבורד ניהול_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "דשבורד ניהול",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}
