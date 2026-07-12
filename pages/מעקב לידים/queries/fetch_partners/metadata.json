@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT '' AS name UNION ALL SELECT DISTINCT \"שם_שותף\" AS name FROM partner_commissions_view WHERE \"שם_שותף\" IS NOT NULL ORDER BY name\n\n",
+      "body": "SELECT DISTINCT \"שם_שותף\" AS name FROM partner_commissions_view WHERE \"שם_שותף\" IS NOT NULL AND \"שם_שותף\" != '' ORDER BY name\n\n\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

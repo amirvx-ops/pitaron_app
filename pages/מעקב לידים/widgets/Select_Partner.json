@@ -37,7 +37,7 @@
   "leftColumn": 13,
   "onOptionChange": "{{fetch_partner_leads.run()}}",
   "optionLabel": "label",
-  "optionValue": "label",
+  "optionValue": "value",
   "options": [
     {
       "label": "הכל",
@@ -99,7 +99,7 @@
   "renderMode": "CANVAS",
   "rightColumn": 24,
   "serverSideFiltering": false,
-  "sourceData": "{{fetch_partners.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj.name } })}}",
+  "sourceData": "{{[{label: 'כולם', value: ''}].concat(fetch_partners.data.map(obj => ({label: obj.name, value: obj.name})))}}",
   "topRow": 14,
   "type": "SELECT_WIDGET",
   "version": 1,
