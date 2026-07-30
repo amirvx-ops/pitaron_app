@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4cb135fad1adb7bca06abf_fa5ec1d5-b68c-43dc-8fb1-9cbf55723cb0",
-  "id": "מעקב לידים_fetch_partner_leads_active",
+  "gitSyncId": "6a4cb135fad1adb7bca06abf_6af6fab9-536b-4111-a4df-1d7210b9cb91",
+  "id": "לידים פעילים_fetch_active_leads",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM partner_commissions_view WHERE (מינוי_סוכן IS NOT NULL OR (חברת_ביטוח IS NOT NULL AND חברת_ביטוח != '')) ORDER BY תאריך_עדכון DESC LIMIT 500\n\n",
+      "body": "SELECT * FROM partner_commissions_view WHERE (מינוי_סוכן IS NOT NULL OR (חברת_ביטוח IS NOT NULL AND חברת_ביטוח != '')) ORDER BY תאריך_עדכון DESC LIMIT 500\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "fetch_partner_leads_active",
-    "pageId": "מעקב לידים",
-    "runBehaviour": "MANUAL",
+    "name": "fetch_active_leads",
+    "pageId": "לידים פעילים",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "6a4cb135fad1adb7bca06abf_242fae4e-998b-4171-8530-352039cde87f",
+  "gitSyncId": "6a4cb135fad1adb7bca06abf_7aecfdb7-0014-448b-b871-30c000604ec9",
   "unpublishedPage": {
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2050,
+          "bottomRow": 490,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 550,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 53,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "מעקב לידים",
+    "name": "לידים פעילים",
     "slug": ""
   }
 }

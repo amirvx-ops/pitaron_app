@@ -1,0 +1,1 @@
+SELECT * FROM partner_commissions_view WHERE (מינוי_סוכן IS NOT NULL OR (חברת_ביטוח IS NOT NULL AND חברת_ביטוח != '')) ORDER BY תאריך_עדכון DESC LIMIT 500

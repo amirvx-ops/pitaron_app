@@ -27,6 +27,10 @@
     {
       "id": "מעקב לידים",
       "isDefault": true
+    },
+    {
+      "id": "לידים פעילים",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
