@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM partner_commissions_view WHERE (מינוי_סוכן IS NOT NULL OR (חברת_ביטוח IS NOT NULL AND חברת_ביטוח != '')) ORDER BY תאריך_עדכון DESC LIMIT 500\n",
+      "body": "SELECT * FROM partner_commissions_view WHERE (מינוי_סוכן IS NOT NULL AND מינוי_סוכן != 0) OR (סגירות IS NOT NULL AND סגירות != 0) ORDER BY תאריך_עדכון DESC LIMIT 500\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
