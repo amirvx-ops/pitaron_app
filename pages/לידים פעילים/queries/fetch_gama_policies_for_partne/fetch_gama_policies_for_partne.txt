@@ -1,0 +1,1 @@
+SELECT client_name, id_number, product, company, premia, tzvira, date, action, partner_name FROM gama_policies_with_partner WHERE partner_name IN ('קבוצת פתרון', 'אקסלנס (פתרון)', 'יש לי זכות') ORDER BY date DESC
